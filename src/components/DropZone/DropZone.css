@@ -1,0 +1,14 @@
+.dnd {
+  height: 10rem;
+  background-color: #ececec;
+  display: flex;
+  /* align-content: center; */
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 0.5rem;
+  margin: 1rem 0;
+  cursor: pointer;
+}
+.dnd > * {
+  margin: 0 auto;
+}

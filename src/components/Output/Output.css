@@ -1,0 +1,12 @@
+.terminal * {
+  outline: none;
+  font-family: monospace;
+}
+
+.terminal {
+  /* max-height: 80vh; */
+}
+
+.output h1 {
+  margin-bottom: 1rem;
+}

@@ -1,0 +1,28 @@
+.landing-page {
+  background: #FF8080;
+  color: #fff;
+}
+
+.full {
+  height: 100vh;
+  display: flex;
+}
+
+.centered {
+  /* align-self: center; */
+  /* justify-self: center; */
+  margin: auto;
+}
+
+.header {
+  font-size: 5rem;
+}
+
+.spaced h1,
+.spaced p {
+  margin: 1rem 0;
+}
+
+p {
+  line-height: 1.4rem;
+}

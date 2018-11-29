@@ -1,0 +1,24 @@
+.new-problem {
+}
+
+.new-problem .param {
+  display: flex;
+  margin: 0.5rem 0;
+}
+
+.new-problem .param > .label {
+  flex: 1 0 auto;
+}
+
+.new-problem .param > input {
+  /* border-radius: 5px;
+  border-color: #ececec; */
+  outline: #ececec solid 2px;
+  border: none;
+  /* border-width: 2px; */
+  padding: 0.5rem;
+}
+
+.new-problem .param > input::placeholder {
+  color: #000;
+}

@@ -1,0 +1,76 @@
+{
+  "name": "cogio",
+  "version": "0.1.0",
+  "author": "Timothy Higinbottom",
+  "homepage": "./",
+  "description": "",
+  "main": "public/electron.js",
+  "repository": "https://github.com/Timothy Higinbottom/cogio2",
+  "build": {
+    "appId": "com.cogio",
+    "files": [
+      "build/**/*",
+      "node_modules/**/*"
+    ],
+    "directories": {
+      "buildResources": "assets"
+    }
+  },
+  "dependencies": {
+    "auth0-js": "^9.8.1",
+    "classnames": "^2.2.6",
+    "electron": "^3.0.7",
+    "electron-builder": "^20.28.4",
+    "electron-is-dev": "^0.3.0",
+    "electron-updater": "^2.10.1",
+    "node-sass-chokidar": "0.0.3",
+    "osx-temperature-sensor": "^1.0.3",
+    "react": "^16.5.2",
+    "react-console-emulator": "^1.5.1",
+    "react-dom": "^16.5.2",
+    "react-router": "^4.3.1",
+    "react-router-dom": "^4.3.1",
+    "react-scripts": "^2.0.5",
+    "systeminformation": "https://github.com/Tim15/systeminformation.git"
+  },
+  "lint-staged": {
+    "{{public,src}/**/*.{scss,js,json},package.json}": [
+      "prettier --write \"{{public,src}/**/*.{scss,js,json},package.json}\"",
+      "git add"
+    ]
+  },
+  "scripts": {
+    "preship": "npm build && npm build-css",
+    "ship": "build --em.main=build/electron.js --win --ia32 -p always -c electron-builder.yml",
+    "build-css": "node-sass-chokidar src/ -o src/",
+    "watch-css": "npm run build-css && node-sass-chokidar src/ -o src/ --watch --recursive",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "pretty": "prettier --write \"{{public,src}/**/*.{css,scss,js,json},package.json}\"",
+    "precommit": "lint-staged",
+    "electron-dev": "concurrently \"npm watch-css\" \"export BROWSER=none && npm start\" \"wait-on http://localhost:3000 && electron .\"",
+    "electron-pack": "build --em.main=build/electron.js --win --ia32 -c electron-builder.yml",
+    "preelectron-pack": "npm build && npm build-css"
+  },
+  "devDependencies": {
+    "concurrently": "^3.5.0",
+    "electron-devtools-installer": "^2.2.4",
+    "electron-react-devtools": "^0.5.3",
+    "husky": "^0.14.3",
+    "lint-staged": "^4.2.3",
+    "prettier": "^1.7.4",
+    "wait-on": "^2.0.2"
+  },
+  "browser": {
+    "child_process": false,
+    "osx-temperature-sensor": false
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
+}

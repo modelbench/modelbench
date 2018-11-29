@@ -1,0 +1,12 @@
+.navbar > .right {
+  display: flex;
+}
+
+.navbar .toolbar {
+  margin: 0 0.5rem;
+}
+.head{
+  font-size: 2.8rem;
+  font-style: bold;
+  font-weight: bold;
+}

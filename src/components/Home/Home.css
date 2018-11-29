@@ -1,0 +1,15 @@
+.home {
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  /* display: flex; */
+  /* align-items: center;
+  justify-content: center; */
+  color: #000;
+}
+
+.no-projects h1,
+.no-projects h3,
+.no-projects p {
+  margin-bottom: 1rem;
+}

@@ -1,0 +1,33 @@
+.sidebar {
+  width: 10rem;
+  min-width: 10rem;
+  border-right: 1px solid #bbbbbb;
+  padding: 3rem 1rem;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 1rem;
+  /* position: fixed; */
+  overflow: hidden;
+  /* position: sticky; */
+}
+
+.sidebar-item {
+  margin: 0.5rem 0;
+}
+
+.sidebar-item > a {
+  text-decoration: none;
+  color: #FF8080;
+}
+
+.bottom {
+  margin-top: auto;
+}
+
+.bottom > a {
+  color: #FF8080;
+}
+
+.bottom ~ .bottom {
+  margin-top: 0;
+}

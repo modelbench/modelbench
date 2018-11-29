@@ -1,0 +1,61 @@
+.card {
+  width: 20rem;
+  height: 10rem;
+  min-width: 20rem;
+  max-width: auto;
+  flex-basis: auto; /* default value */
+  flex-grow: 1;
+  /* background-color: #cccccc; */
+  background-color: #00a5ff;
+  border-radius: 0.3rem;
+  margin: 1rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.card > .name > h3 {
+  /* flex-grow: 1 0 50%; */
+  /* height: 50%; */
+  margin-bottom: 1rem;
+}
+
+.card > .description {
+  flex-grow: 1;
+}
+
+.card > div {
+  color: #fff;
+}
+
+#colorHead{
+  color: #000000;
+}
+#colorDescr{
+  color: #707070;
+}
+
+.featured {
+  display: flex;
+  margin: 0 -1rem;
+  flex-wrap: wrap;
+  margin-top: -1rem;
+}
+
+.buttonAdd{
+  height: 3.23rem;
+  width: 3.23rem;
+  border-radius: 50%;
+  font-size: 2.6rem;
+  color: #FF8080;
+}
+
+.buttonTwo {
+    background-color: #FF8080; /* Green */
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+}
